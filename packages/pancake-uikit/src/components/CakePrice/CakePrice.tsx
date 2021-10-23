@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { PancakeRoundIcon } from "../Svg";
 import Text from "../Text/Text";
+import Heading from "../Heading/Heading";
 import Skeleton from "../Skeleton/Skeleton";
 import { Colors } from "../../theme";
 
@@ -31,7 +32,7 @@ const CakePrice: React.FC<Props> = ({ cakePriceUsd, color = "textSubtle" }) => {
     >
       {/* <PancakeRoundIcon width="24px" mr="8px" /> */}
       <img src="/images/9.png" alt="priceIcon" style={{width:"50px"}} />
-      <Text color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+      <Heading style={{marginLeft:"1rem"}} color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Heading>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />
